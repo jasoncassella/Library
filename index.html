@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div id="side-form">
+        <input
+          id="title"
+          type="text"
+          placeholder="What is the title of the book?"
+          required
+        />
+        <input
+          id="author"
+          type="text"
+          placeholder="Who is the author of the book?"
+          required
+        />
+        <input
+          id="pages"
+          type="number"
+          placeholder="How many pages are in the book?"
+          required
+        />
+        <div id="checkbox-button">
+          <input id="read" type="checkbox" name="checkbox" />
+          <label for="read">I have already read this book</label>
+          <button id="add-book">ADD BOOK</button>
+        </div>
+      </div>
+    </form>
+
+    <main id="library-content">
+      <table id="books-list">
+        <thead id="book-requirements">
+          <tr>
+            <td>TITLE</td>
+            <td>AUTHOR</td>
+            <td>PAGES</td>
+            <td>STATUS</td>
+            <td>REMOVAL</td>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- todo: make this with js -->
+          <!-- <tr class="book=info">
+            <td>sdf</td>
+            <td>df</td>
+            <td>sdf</td>
+            <td>sdf</td>
+            <td>sdf</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
