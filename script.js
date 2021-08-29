@@ -53,6 +53,7 @@ function updateLibraryContent() {
     const bookDelete = document.createElement('td');
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '🗑';
+    deleteButton.classList.add('delete')
     bookDelete.appendChild(deleteButton);
     bookRow.appendChild(bookDelete);
     deleteButton.addEventListener('click', (e) => {
@@ -109,3 +110,4 @@ addBookButton.addEventListener('click', (e) => {
 });
 
 updateLibraryContent();
+addBookToLibrary('The Hobbit', 'J.D.D Whateverthefuck', 295, true);
