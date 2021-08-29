@@ -1,3 +1,4 @@
 # library project
 
-[live demo](github.com/)
+[live demo](https://jasoncassella.github.io/library/)
+
