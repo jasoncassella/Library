@@ -3,6 +3,11 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+form {
+  width: 80%;
+}
+
 #side-form {
   margin: 5%;
   padding: 5%;
@@ -12,42 +17,45 @@
 }
 
 #side-form input {
-  margin: 2%;
+  font-size: 1rem;
+  padding: 1.2%;
+  margin: 1.5%;
 }
 
 #checkbox-button label {
   color: hsl(208, 100%, 30%);
+  font-size: 0.9rem;
 }
 
 #add-book:hover {
-  background-color: hsl(208, 100%, 87%);
+  cursor: pointer;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: hsl(208, 100%, 87%);
 }
 
 main {
+  display: flex;
   margin: 5%;
   padding: 2%;
   background-color: hsl(208, 100%, 95%);
+  width: 85%;
 }
 
-#book-requirements {
-  background-color: aliceblue;
+#books-list {
+  width: 100%;
 }
 
 #book-requirements tr td {
-  font-size: 1.05rem;
+  text-align: center;
   font-weight: bolder;
 }
 
 #table-body tr td {
-  font-size: 0.95rem;
   text-align: center;
 }
 
@@ -58,12 +66,20 @@ main {
   padding: 1%;
   width: 30px;
   cursor: pointer;
-
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
   body {
     margin-top: 10%;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    margin: 5%;
+    padding: 2%;
+    background-color: hsl(208, 100%, 95%);
+    width: 75%;
   }
 }
