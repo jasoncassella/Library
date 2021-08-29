@@ -55,6 +55,12 @@ function updateLibraryContent() {
     deleteButton.textContent = '🗑';
     bookDelete.appendChild(deleteButton);
     bookRow.appendChild(bookDelete);
+    bookRow.addEventListener('click', (e) => {
+      const { target } = e;
+      const tr = target.parentNode.parentNode.rowIndex - 1;
+      myLibrary.splice(tr, 1);
+      updateLibraryContent();
+    });
   });
 }
 
