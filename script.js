@@ -1,6 +1,5 @@
 let myLibrary = [];
 const addBookButton = document.querySelector('#add-book');
-
 class Book {
   constructor(title, author, pages, status) {
     this.title = title;
@@ -32,11 +31,22 @@ function updateLibraryContent() {
     // BOOK STATUS BUTTON
     const bookStatus = document.createElement('td');
     const changeStatusButton = document.createElement('button');
-    if (book.status) {
+    if (book.status === true) {
+      changeStatusButton.style.color = 'green';
       changeStatusButton.textContent = '✓';
     } else {
+      changeStatusButton.style.color = 'red';
       changeStatusButton.textContent = '✕';
     }
+    changeStatusButton.addEventListener('click', (e) => {
+      if (changeStatusButton.textContent === '✓') {
+        e.target.style.color = 'red';
+        e.target.textContent = '✕';
+      } else if (changeStatusButton.textContent === '✕') {
+        e.target.style.color = 'green';
+        e.target.textContent = '✓';
+      }
+    });
     bookStatus.appendChild(changeStatusButton);
     bookRow.appendChild(bookStatus);
     // BOOK REMOVAL BUTTON
@@ -56,19 +66,16 @@ function addBookToLibrary(title, author, pages, status) {
 
 function validateForm(e) {
   e.preventDefault();
-  console.log('hi!!');
   const form = document.querySelector('form');
   const titleInput = document.querySelector('#title');
   const authorInput = document.querySelector('#author');
   const pagesInput = document.querySelector('#pages');
-  const checkbox = document.querySelector('#read');
   if (
     titleInput.value !== '' &&
     authorInput.value !== '' &&
     pagesInput.value !== '' &&
     pagesInput.value > 0
   ) {
-    console.log('hi');
     if (checkbox.checked) {
       addBookToLibrary(
         titleInput.value,
@@ -87,6 +94,8 @@ function validateForm(e) {
     form.reset();
   }
 }
+
+const checkbox = document.querySelector('#read');
 
 addBookButton.addEventListener('click', (e) => {
   validateForm(e);
