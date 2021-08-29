@@ -110,4 +110,4 @@ addBookButton.addEventListener('click', (e) => {
 });
 
 updateLibraryContent();
-addBookToLibrary('The Hobbit', 'J.D.D Whateverthefuck', 295, true);
+addBookToLibrary('The Hobbit', 'J.R.R Tolkien', 295, true);
