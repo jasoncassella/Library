@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
 #side-form {
   margin: 5%;
   padding: 5%;
@@ -8,6 +13,10 @@
 
 #side-form input {
   margin: 2%;
+}
+
+#checkbox-button label {
+  color: hsl(208, 100%, 30%);
 }
 
 #add-book:hover {
@@ -28,8 +37,17 @@ main {
   background-color: hsl(208, 100%, 95%);
 }
 
+#book-requirements {
+  background-color: aliceblue;
+}
+
+#book-requirements tr td {
+  font-size: 1.05rem;
+  font-weight: bolder;
+}
+
 #table-body tr td {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   text-align: center;
 }
 
@@ -37,7 +55,7 @@ main {
   line-height: 3;
   border: none;
   background-color: hsl(208, 100%, 95%);
-  padding: 0.8%;
+  padding: 1%;
   width: 30px;
   cursor: pointer;
 
@@ -48,8 +66,4 @@ main {
     margin-top: 10%;
     flex-direction: row;
   }
-}
-
-h4 {
-  font-weight: 500;
 }
